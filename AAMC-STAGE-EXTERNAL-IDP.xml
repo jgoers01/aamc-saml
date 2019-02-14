@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<EntityDescriptor entityID="AAMC-External" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+    <IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDtzCCAp+gAwIBAgIEbCGUHjANBgkqhkiG9w0BAQsFADCBizELMAkGA1UEBhMCVVMxHTAbBgNV
+BAgTFERpc3RyaWN0IG9mIENvbHVtYmlhMRMwEQYDVQQHEwpXYXNoaW5ndG9uMQ0wCwYDVQQKEwRB
+QU1DMR8wHQYDVQQLExZFbnRlcnByaXNlIEVuZ2luZWVyaW5nMRgwFgYDVQQDEw9TVEFHRSBTQU1M
+IENlcnQwHhcNMTQwOTA0MTMwMDM4WhcNMTYwOTAzMTMwMDM4WjCBizELMAkGA1UEBhMCVVMxHTAb
+BgNVBAgTFERpc3RyaWN0IG9mIENvbHVtYmlhMRMwEQYDVQQHEwpXYXNoaW5ndG9uMQ0wCwYDVQQK
+EwRBQU1DMR8wHQYDVQQLExZFbnRlcnByaXNlIEVuZ2luZWVyaW5nMRgwFgYDVQQDEw9TVEFHRSBT
+QU1MIENlcnQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDZ1WBng5aPRgi9y1HLvJGA
+cG3z7qZvd49wmFoRixs8A6mWMRf2StPbiRxqcEw8gkfM49SnUj0K0eiMAq7bV5v7geOSTOY4bvEY
+peZ0nI65JFdWe6KecsYF+TNEh98KAN6PKweZ5fqry4RCbGPapUTkmVyKnLpRn7i7X4KH5+2XBjNd
+WhxZwRKBj6EZv1RMTmqwACcFY2Xkfs7kKLIhAvsfhFqIuCMpUlhnlDBWJhQdpDWjjCaU08cmGk5n
+EaVgcnjzV/gZ3PBerxjXuBgeU1SkJooGxpvKq7kK/OfZ+A0QDDw8V58fkF401WuvPf3A+r9nrebS
+vf8neh+rWu7ELrutAgMBAAGjITAfMB0GA1UdDgQWBBSFp+lNLEyFZigk1JSxeMyKQYuVzDANBgkq
+hkiG9w0BAQsFAAOCAQEAqPnFFNIOvMw1zPXY2NlCRGNNKmRYP1HBsbAxRJlngwo16WTKuxpuTAnQ
+DYVlhczfm2Vx3KHhf6KBWiUJThiyNogsBPE6R3sPjQC4PWW5AYlViM4y9x7l6IOm8f5meQka5RU9
+HJiDzdG1Rgfjfy8lA+pJPbeFE8YwWgfTam91D4CBthhWaIJYCbYKVwNilR162zfnB3d2h8E/J/FY
+bE1g8ayNcvp0+18/ayJ4dX4MmBTbJDy/GtW3ez1C7qY5g4ZOUeuyZggLL4/MWTj5GRdEzhQYfnzE
+JrL2vFMyphFeyQjqZYs/T0xDXcSfrn/ifoKkZVLbwe8T2NLf+aCGoIvlvA==
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://apps.staging.aamc.org/openam/IDPSloRedirect/metaAlias/External/idp" ResponseLocation="https://apps.staging.aamc.org/openam/IDPSloRedirect/metaAlias/External/idp"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://apps.staging.aamc.org/openam/IDPSloPOST/metaAlias/External/idp" ResponseLocation="https://apps.staging.aamc.org/openam/IDPSloPOST/metaAlias/External/idp"/>
+        <ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://apps.staging.aamc.org/openam/IDPMniRedirect/metaAlias/External/idp" ResponseLocation="https://apps.staging.aamc.org/openam/IDPMniRedirect/metaAlias/External/idp"/>
+        <ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://apps.staging.aamc.org/openam/IDPMniPOST/metaAlias/External/idp" ResponseLocation="https://apps.staging.aamc.org/openam/IDPMniPOST/metaAlias/External/idp"/>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://apps.staging.aamc.org/openam/SSORedirect/metaAlias/External/idp"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://apps.staging.aamc.org/openam/SSOPOST/metaAlias/External/idp"/>
+    </IDPSSODescriptor>
+</EntityDescriptor>
+
